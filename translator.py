@@ -12,8 +12,12 @@ pygame.init()
 model = whisper.load_model("base")
 
 # deepL api request
+import os
 url = "https://api-free.deepl.com/v2/translate"
-api_key = '8edcabcf-2501-1d75-f520-82e2684e2611:fx'
+api_key = os.environ.get("DEEPL_API_KEY")
+if api_key is None:
+    print("Please set the DEEPL_API_KEY environment variable.")
+    exit(1)
 headers = {"Content-Type": "application/x-www-form-urlencoded"}
 
 
