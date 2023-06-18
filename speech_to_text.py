@@ -3,8 +3,6 @@ import sounddevice as sd
 from scipy.io.wavfile import write
 import os
 
-#openai.api_key = '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'
-
 model = whisper.load_model("base")
 
 
@@ -52,12 +50,3 @@ def send_audio_to_whisper(filename):
     return result.text
     
 
-def main():
-    audio_filename = create_audio_file()
-    transcription_response = send_audio_to_whisper(audio_filename)
-    
-    print(transcription_response)
-    print("Deleting audio file.")
-    os.remove(audio_filename)
-
-main()
