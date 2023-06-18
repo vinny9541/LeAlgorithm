@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"> <!--href="style.css">-->
+</head>
+<body>
+    <div id="header">
+        <ul>
+            <li><a href="site.html" class ="left-link">LeTranslate</a></li>
+            <li style = "float:right"><a class="active" href="login">Login/signup</a></li>
+        </ul>
+    </div>
+    <div id="text">
+        About Us
+    </div>
+<div id="main-content">
+        <div class="text-box">
+            We are LeAlgorithm, our names are Nathan Nguyen, Brian Liu, Vincent Li, and we are all freshmen here at Cal Hacks hoping to gain experience with AI and building. We hope that at our time in Cal Hacks, we managed to make something that could be impactful for others.
+        </div>
+        <div class="text-box">
+            WhisperAI, DeepL, python, html, css, maybe flask.
+    </div>
+</div>
+            <div id="recordingText">Recording...</div>
+
+        <div id="buttons">
+            <a id="speechButton" class="medium-btn" href="#" onclick="toggleRecording()">
+                <span id="speechText">Speech to Speech translation</span>
+                <img id="speechImage" src="https://cdn.onlinewebfonts.com/svg/img_454939.png" alt="Speech to Speech" />
+            </a>
+
+            <a id="playbutton" class="medium-btn" href="#" onclick="togglePlay()">
+                <span id = "practiceWords"> Practice your words</span>
+                <img id="playImage" src="https://freepngimg.com/thumb/play_button/25623-4-play-button-transparent-background.png" alt="Practice" />
+            </a>
+            
+            <a id="talkbutton" class="medium-btn" href="#" onclick="toggleTalk()">
+                <span id = "freqPhrase"> frequently translated phrases </span>
+                <img id="talkImage" src="https://media.istockphoto.com/id/490590566/vector/speaking-icon-on-a-white-background-singleseries.jpg?s=612x612&w=0&k=20&c=FwcTP6uZ6yHIl7jyf0fRyLwuHxAa8yegOq0OYPQ2Ph0=" alt="Phrases" />
+            </a>
+        </div>
+        
+    <script 
+        type="text/javascript" src="{{url_for('static', filename='index.js')}}"
+    ></script>
+</body>
+</html>
